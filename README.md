@@ -76,7 +76,8 @@ Prerequisites or dependencies that need to be installed or set up before running
 
 
 
-## Getting Started
+## Getting Started 
+### Instruction to run the  project
 
 Provide detailed instructions on how to get your project up and running. Include any configuration steps or environment setup.
 
