@@ -1,6 +1,6 @@
 # Project Name
 
-Users Dashboard
+Todo-List
 
 ## Table of Contents
 
@@ -79,7 +79,7 @@ Prerequisites or dependencies that need to be installed or set up before running
 ## Getting Started 
 ### Instruction to run the  project
 
-Provide detailed instructions on how to get your project up and running. Include any configuration steps or environment setup.
+Provide detailed instructions on how to get your project up and running. 
 
 1. Clone the repository: git clone https://github.com/gopal265/todolist.git
 2. Navigate to the project directory : cd todolist
