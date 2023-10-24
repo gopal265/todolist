@@ -24,17 +24,20 @@ List key features and functionalities of your project.
 - CRUD feautre : The user can perform the crud operations like create,update,delete on the tasks easily.
 
 ## Some Images
- Landing Page
-![Alt Text](./client/src/images/image1.png)
+ Login Page
+![Alt Text](./frontend/src/assets/images/login.png)
 
-Searching
-![Alt Text](./client/src/images/image2.png)
+Register Page
+![Alt Text](./frontend/src/assets/images/register.png)
 
-Sorting by Name
-![Alt Text](./client/src/images/image3.png)
+Home Page
+![Alt Text](./frontend/src/assets/images/mainpage.png)
 
-Showing extra details
-![Alt Text](./client/src/images/image4.png)
+Editing Task
+![Alt Text](./frontend/src/assets/images/editpage.png)
+
+Completed Task UI
+![Alt Text](./frontend/src/assets/images/completetask.png)
   
 
 ## Prerequisites
