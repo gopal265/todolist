@@ -90,6 +90,7 @@ Provide detailed instructions on how to get your project up and running.
 7. Start the development server : npm start (in client)
 8. Start the node server : nodemon index.js (in server in cmd only)
 9. Open your browser and visit : http://localhost:3000
+10. Note : Need to have Internet  for the backend to work,because the data is stored in Mongodb Atlas which is a cloud service
 
 
 ## Usage
