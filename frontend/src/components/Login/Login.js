@@ -2,50 +2,53 @@ import React, { useEffect, useState } from 'react';
 import validator from 'validator';
 import './Login.css'; // Import your CSS file
 import { useNavigate } from 'react-router-dom';
-import {  useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../../actions/user';
 
 const Login = () => {
+    // initalizing state for email and password
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [showPassword,setShowPassword] = useState(false)
-    const {user,loading,error} = useSelector(state => state.user)
+    const [showPassword, setShowPassword] = useState(false)   // used to toggle between show and hide password
+    const { user, loading, error } = useSelector(state => state.user)
     const navigate = useNavigate();
     const dispatch = useDispatch();
-
+    // to show error based on the conditions in the submit function
     let par = document.getElementById('error1');
     let par2 = document.getElementById('error2');
 
     const submit = (e) => {
-        e.preventDefault();
+        e.preventDefault();   // to prevent refresh of page
         if (email.trim() === '') return (par.innerHTML = 'Please Enter the Email Address');
         if (!validator.isEmail(email.trim())) return (par.innerHTML = 'Please Enter a valid Email Address');
 
         if (validator.isEmail(email.trim())) {
-
-            localStorage.setItem('email', JSON.stringify(email));
-        }
-        if (password.trim() !== '') {
-            localStorage.setItem('email', JSON.stringify(email));
-            dispatch(login({email:email,password:password}))
-        } else {
-            par2.innerHTML = 'Please Enter Password';
+            if (password.trim() !== '') {
+                dispatch(login({ email: email, password: password }))
+            } else {
+                par2.innerHTML = 'Please Enter Password';
+            }
 
         }
+
     };
 
-    useEffect(() =>{
-        if(error){
+    useEffect(() => {
+        if (error) {
             return
         }
-        if(user && user.email){
+        // if login is success and we get user data then go to taskwrapper component
+        if (user && user.email) {
             navigate("/tasks")
         }
 
-    },[user,error])
+    }, [user, error])
 
     return (
         <div className="login-container">
+            {error && <div class="alert alert-danger error" role="alert">
+                {error}     {/* to display the error */}
+            </div>}
             <h3>Login</h3>
             <form>
                 <div className="form-group">
@@ -59,7 +62,7 @@ const Login = () => {
                     <p id="error2" className="error"></p>
                 </div>
                 <div className="form-group form-check">
-                    <input type="checkbox" className="form-check-input" id="exampleCheck1" onChange={()=>setShowPassword(!showPassword)}/>
+                    <input type="checkbox" className="form-check-input" id="exampleCheck1" onChange={() => setShowPassword(!showPassword)} />
                     <label className="form-check-label" htmlFor="exampleCheck1">
                         Show Password
                     </label>

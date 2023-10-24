@@ -78,10 +78,10 @@ Prerequisites or dependencies that need to be installed or set up before running
 Provide detailed instructions on how to get your project up and running. Include any configuration steps or environment setup.
 
 1. Clone the repository: git clone https://github.com/gopal265/todolist.git
-2. Navigate to the project directory : cd 
-3. Navigate to client folder : cd client
+2. Navigate to the project directory : cd todolist
+3. Navigate to client folder : cd frontend
 4. Install dependencies : npm install
-5. Navigate to server folder : cd server (in new terminal)
+5. Navigate to server folder : cd backend (in new terminal)
 6. Install dependencies : npm install
 7. Start the development server : npm start (in client)
 8. Start the node server : nodemon index.js (in server in cmd only)
@@ -89,4 +89,8 @@ Provide detailed instructions on how to get your project up and running. Include
 
 
 ## Usage
-After installing and running the project locally,you will able to see a search input in which you can type the name of the user you want,you can click sortby name or sortby email  to sort the user as per your wish.If you do not want any filters,just click the clear filters button,below the search input and sort button you can see the user basic details and also a view Details button.You can click to know more details about the user which will appear just below the user like a dropdown,if you click again the details will disappear.At the bottom ,you can see a pagination that can be used to navigate through users,also the current page number will be highlighted in blue.
+For Demo use:
+Email : admin@gmail.com
+password : 123
+
+After installing and running the project locally,when you go http://localhost:3000 . You will be landed in the login page where you need to enter the Email Id and password.If you have not register,you can click register below submit button and it will navigate to register page where you can reigster.Or you can use the above mentioned credentials for a demo use.After login,you can see a Task Manger page where you can add a task by typing the input and clicking add submit,you can delete task by pressing delete icon,can edit by pressing edit icon,you can check the box if the task is complete and you can see a linethrough the checked task indicating the task is complete.
