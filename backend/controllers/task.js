@@ -1,5 +1,6 @@
 var User = require("../models/user.js")
 var Task = require("../models/task.js")
+
 exports.createTask = async(req,res) =>{
 
 
@@ -37,7 +38,7 @@ exports.getTasks = async(req,res) =>{
         const findUser = await User.findById(id)
 
         if(findUser){
-            const tasks = await Task.find({userId:id})
+            const tasks = await Task.find({userId:id}).sort({ createdAt: -1 })
 
             return res.status(200).json({
                 message:"Fetched successfully",
