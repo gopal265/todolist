@@ -42,7 +42,7 @@ const Login = () => {
             navigate("/tasks")
         }
 
-    }, [user, error])
+    }, [user, error,navigate])
 
     return (
         <div className="login-container">
@@ -68,7 +68,7 @@ const Login = () => {
                     </label>
                 </div>
                 <button type="submit" className="btn btn-primary" onClick={submit}>
-                    {loading == true ? "Loading..." : "Submit"}
+                    {loading === true ? "Loading..." : "Submit"}
                 </button>
             </form>
             <div className='pt-3'>No account ? <span className="highlight" onClick={() => navigate('/register')}>register</span></div>

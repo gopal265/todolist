@@ -24,7 +24,7 @@ const TasksWrapper = () => {
     }
     // here i want to dispatch whenever i update or add or delete a task so i keep the addMsg,updateMsg,deleteMsg as dependencies
     dispatch(getTasks(user._id))
-  }, [addMsg, updateMsg, deleteMsg, user, dispatch])
+  }, [addMsg, updateMsg, deleteMsg, user, dispatch,navigate])
   return (
     <>
       <div className='tasks-container'>

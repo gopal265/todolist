@@ -8,10 +8,10 @@ const NavBar = () => {
     <div className='pb-4'>
 
       <nav class="navbar navbar-light bg-white custom-nav">
-        <a class="navbar-brand nav-text" >
+        <span class="navbar-brand nav-text" >
           <img src={navbaricon} width="30" height="30" class="d-inline-block align-top" alt="icon" onClick={() => navigate("/")} />
           Todo-List
-        </a>
+        </span>
       </nav>
     </div>
   )
