@@ -5,12 +5,9 @@ var taskRouter = require("./routes/task.js")
 var app = express();
 var mongoose = require("mongoose")
 
-const corsOptions = {
-    origin : "https://profileui.onrender.com",
-  };
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
-app.use(cors(corsOptions));
+app.use(cors());
 app.use("/api/user",userRouter);
 app.use("/api/task",taskRouter);
 
